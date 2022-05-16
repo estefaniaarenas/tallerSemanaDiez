@@ -1,0 +1,15 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .barra {
+    background-color: #9A0680;
+    
+  }
+  
+  .i{
+    color:rgb(6, 6, 6);
+  }
+  .n{
+    color:rgb(8, 8, 8);
+  }

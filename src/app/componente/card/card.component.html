@@ -1,0 +1,23 @@
+<section class="page-container container2">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let item of datosApi |paginate:{ itemsPerPage: 4, currentPage: pages } ">
+        <div class="card" style="width: 18rem">
+          <img src="{{ item.picture.large }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h2 class="card-title">
+              {{ item.name.title }} {{ item.name.first }} {{ item.name.last }}
+            </h2>
+            <p class="card-text">{{ item.gender}}</p>
+            <p class="card-text">{{item.location.street.number}} {{item.location.street.name}}</p>
+            <p class="card-text">{{item.location.city}}</p>
+            <p class="card-text">{{item.email}}</p>
+            <a class="btn btn-primary"(click)="boton(item.name.first)">ME GUSTA</a>
+          </div>
+        </div>
+      </div>
+      <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+    </div>
+  </div>
+
+</section>

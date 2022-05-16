@@ -1,0 +1,29 @@
+<section class="page-container container2">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+    <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of datosApi; let index=index">
+          <tr>
+            <td>{{index+1}}</td>
+            <td>{{item.name.title }} {{item.name.first}} {{item.name.last}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.location.street.number}} {{item.location.street.name}}</td>
+            <td>{{item.location.city}}</td>
+            <td>{{item.email}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+      </div>
+      </div>
+</section>
